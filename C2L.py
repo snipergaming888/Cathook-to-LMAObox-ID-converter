@@ -1,5 +1,5 @@
 import sys
-sys.stdout = open('export.txt', 'w')
+sys.stdout = open('IgnoreList.lua', 'w')
 with open('ids.txt', "r") as f:
     for line in f:
         numeric_filter = filter(str.isdigit, line)

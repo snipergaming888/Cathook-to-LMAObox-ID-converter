@@ -1,7 +1,10 @@
 import sys
 #sys.stdout = open('export.txt', 'w')
 num = int(input("Cathook or Lmaobox? (0 or 1): "))
-sys.stdout = open('export.txt', 'w') 
+if num == 1:
+    sys.stdout = open('IgnoreList.lua', 'w') 
+if num == 0:
+    sys.stdout = open('cat_ids.cfg', 'w') 
 with open('ids.txt', "r") as f:
     for line in f:
         numeric_filter = filter(str.isdigit, line)
